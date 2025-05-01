@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games</title>
+    <style>
+/* Game-Themed Body */
+/* Import Google Font for a Cyberpunk Look */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+/* Fullscreen Animated Background */
+body {
+    font-family: 'Orbitron', sans-serif;
+    background: radial-gradient(circle, rgba(18,18,18,1) 10%, rgba(0,0,0,1) 80%);
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    /* overflow: hidden; */
+    position: relative;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+/* Background Animation */
+body::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background: radial-gradient(circle, rgba(255, 0, 255, 0.2) 10%, rgba(0, 0, 0, 1) 80%);
+    animation: pulseBackground 10s infinite linear;
+    z-index: -1;
+}
+
+@keyframes pulseBackground {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Game Box Styling */
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 50px;
+    overflow: hidden;
+}
+
+/* Game Cards */
+.hangman, .snake, .hangman2, .FlappyBird {
+    width: 220px;
+    height: 220px;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 0px 15px rgba(255, 0, 255, 0.7);
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Game Cards - Hover Effects */
+.hangman:hover, .snake:hover, .hangman2:hover, .FlappyBird:hover {
+    transform: scale(1.2) rotate(-3deg);
+    box-shadow: 0px 0px 30px rgba(0, 255, 255, 1);
+    overflow: hidden;
+}
+
+/* 3D Image Effect */
+.hangman img, .snake img, .hangman2 img, .FlappyBird img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.5s ease-in-out;
+    
+}
+
+/* Hover Effect - Images Zoom & Tilt */
+.hangman:hover img, .snake:hover img, .hangman2:hover img, .FlappyBird:hover img {
+    transform: scale(1.2) rotate(5deg);
+}
+
+/* Click Animation */
+@keyframes clickEffect {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.9); }
+    100% { transform: scale(1); }
+}
+
+.hangman:active, .snake:active, .hangman2:active, .FlappyBird:active {
+    animation: clickEffect 0.2s ease-in-out;
+}
+
+/* Neon Title */
+h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: #ff00ff;
+    text-shadow: 0 0 10px rgba(255, 0, 255, 0.7), 0 0 20px rgba(255, 255, 0, 0.7);
+    animation: glowText 1.5s infinite alternate;
+}
+
+/* Glowing Text Effect */
+@keyframes glowText {
+    0% { text-shadow: 0 0 10px rgba(255, 0, 255, 0.7), 0 0 20px rgba(255, 255, 0, 0.7); }
+    100% { text-shadow: 0 0 30px rgba(255, 0, 255, 1), 0 0 40px rgba(255, 255, 0, 1); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .box {
+        flex-direction: column;
+        gap: 70px;
+    }
+    .hangman, .snake, .hangman2, .FlappyBird {
+        width: 90%;
+        max-width: 300px;
+    }
+}
+
+    </style>
+
+
+</head>
+<body>
+    <div class="box">
+        <div class="hangman"></div>
+        <div class="snake"></div>
+        <!-- <div class="hangman2"></div> -->
+        <div class="FlappyBird"></div>
+    </div>
+    <!-- <a href="../hangman/project.html">tryhjk</a> -->
+    <script src="./games.js"></script>
+</body>
+</html>

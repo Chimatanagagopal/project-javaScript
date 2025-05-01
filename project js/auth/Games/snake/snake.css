@@ -1,0 +1,103 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #222;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.wrapper {
+    width: 400px;
+    height: 450px;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position:relative
+}
+
+.game-details {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    color: #fff;
+    font-size: 18px;
+}
+
+.play-board {
+    width: 90%;
+    height: 350px;
+    background-color: #000;
+    position: relative;
+    display: grid;
+    /* flex-wrap: wrap; */
+    grid-template:repeat(30,1fr)/repeat(30,1fr);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.snake {
+    width: 20px;
+    height: 20px;
+    background-color: lime;
+    position: absolute;
+    border-radius: 3px;
+}
+
+.food{
+    width: 14px;
+    height: 14px;
+    background-color: red;
+    position: absolute;
+}
+img{
+    width:300px;
+    height:300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+.reload-btn{
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5px;
+    color:red
+}
+/* .controls{
+    display: flex;
+    justify-content:;
+}
+.controls i{
+    padding: 25px 0px;
+    color:whitesmoke;
+    font-size: 1.3rem;
+    border-right: 1px solid #171b26;
+    width: calc(100%/4);
+} */
+.controls {
+    display: flex;
+    justify-content: space-around;
+    align-items: space-around;
+    gap: 10px; /* Adjust spacing between icons */
+    margin-top: 10px; /* Optional: Adjust spacing from the play board */
+}
+
+.controls i {
+    font-size: 24px;
+    padding: 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+}

@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script type="module" src="auth.js"></script>
+    <style>
+        /* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #6e45e2, #88d3ce);
+}
+
+/* Neumorphic Login Form */
+#loginForm {
+    background: #ecf0f3;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 6px 6px 12px #babecc, -6px -6px 12px #ffffff;
+    text-align: center;
+    width: 350px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    animation: float 3s ease-in-out infinite;
+}
+
+#loginForm:hover {
+    transform: scale(1.05);
+    box-shadow: 8px 8px 16px #babecc, -8px -8px 16px #ffffff;
+}
+
+/* Floating Animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Heading */
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Input Fields */
+.input-container {
+    position: relative;
+    margin: 15px 0;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #ecf0f3;
+    border-radius: 8px;
+    font-size: 16px;
+    box-shadow: inset 4px 4px 6px #babecc, inset -4px -4px 6px #ffffff;
+    transition: all 0.3s ease;
+    outline: none;
+    color: #333;
+}
+
+input:focus {
+    box-shadow: inset 2px 2px 4px #babecc, inset -2px -2px 4px #ffffff;
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: linear-gradient(145deg, #6e45e2, #88d3ce);
+    color: white;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 4px 4px 8px #babecc, -4px -4px 8px #ffffff;
+}
+
+button:hover {
+    background: linear-gradient(145deg, #88d3ce, #6e45e2);
+    box-shadow: 2px 2px 6px #babecc, -2px -2px 6px #ffffff;
+}
+
+button:active {
+    box-shadow: inset 2px 2px 6px #babecc, inset -2px -2px 6px #ffffff;
+}
+
+/* Link */
+.link {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #666;
+}
+
+.link a {
+    color: #6e45e2;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.link a:hover {
+    text-decoration: underline;
+}
+
+    </style>
+</head>
+<body>
+    <div id="loginForm">
+        <h2>Login</h2>
+        <input type="email" id="emaillogin" placeholder="Enter email"><br><br>
+        <input type="password" id="passwordlogin" placeholder="Enter password"><br><br>
+        <button id="btn2">Log In</button><br><br>
+        <button id="forgotPasswordBtn">Forgot Password?</button>
+        <a href="./Games/again/games.html"></a>
+    </div>
+</body>
+</html>
+

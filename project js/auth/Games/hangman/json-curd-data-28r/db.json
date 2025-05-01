@@ -1,0 +1,14 @@
+{
+  "wordlist": [
+  { "word": "elephant", "hint": "A large mammal with a trunk" },
+  { "word": "guitar", "hint": "A musical instrument with strings" },
+  { "word": "ocean", "hint": "A vast body of saltwater" },
+  { "word": "pyramid", "hint": "An ancient Egyptian structure" },
+  { "word": "volcano", "hint": "A mountain that erupts with lava" },
+  { "word": "astronaut", "hint": "A person who travels to space" },
+  { "word": "chocolate", "hint": "A sweet treat made from cocoa" },
+  { "word": "kangaroo", "hint": "An animal that hops and has a pouch" },
+  { "word": "umbrella", "hint": "Used to protect from rain" },
+  { "word": "telescope", "hint": "Used to see distant objects in space" }
+]
+} 
